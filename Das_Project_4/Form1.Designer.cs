@@ -138,7 +138,7 @@
             Controls.Add(txtnumwidgets);
             Margin = new Padding(2);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Tanmay-Das Form 1";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
