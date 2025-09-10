@@ -16,5 +16,37 @@ namespace Das_Project_4
         {
             this.Close();
         }
+
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnumwidgets_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtcustomername.Clear();
+            txtnumwidgets.Clear();
+            lstOut.Items.Clear();
+        }
+
+        private void txtnumwidgets_Enter(object sender, EventArgs e)
+        {
+            txtnumwidgets.BackColor = Color.Beige;
+        }
+
+        private void txtnumwidgets_Leave(object sender, EventArgs e)
+        {
+            txtnumwidgets.BackColor = SystemColors.Window;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

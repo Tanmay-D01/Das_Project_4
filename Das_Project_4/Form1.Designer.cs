@@ -40,62 +40,74 @@
             // 
             // txtnumwidgets
             // 
-            txtnumwidgets.Location = new Point(209, 40);
+            txtnumwidgets.Location = new Point(146, 56);
+            txtnumwidgets.Margin = new Padding(2);
             txtnumwidgets.Name = "txtnumwidgets";
-            txtnumwidgets.Size = new Size(150, 31);
+            txtnumwidgets.Size = new Size(137, 23);
             txtnumwidgets.TabIndex = 0;
+            txtnumwidgets.TextChanged += txtnumwidgets_TextChanged;
+            txtnumwidgets.Enter += txtnumwidgets_Enter;
+            txtnumwidgets.Leave += txtnumwidgets_Leave;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(128, 40);
+            label1.Location = new Point(48, 24);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(57, 25);
-            label1.TabIndex = 1;
-            label1.Text = "Text 1";
+            label1.Size = new Size(94, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Customer Name";
             label1.Click += label1_Click;
             // 
             // txtcustomername
             // 
-            txtcustomername.Location = new Point(209, 86);
+            txtcustomername.Location = new Point(146, 24);
+            txtcustomername.Margin = new Padding(2);
             txtcustomername.Name = "txtcustomername";
-            txtcustomername.Size = new Size(150, 31);
+            txtcustomername.Size = new Size(137, 23);
             txtcustomername.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(128, 86);
+            label2.Location = new Point(31, 59);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(57, 25);
-            label2.TabIndex = 3;
-            label2.Text = "Text 2";
+            label2.Size = new Size(111, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Number of Widgets";
             // 
             // btnCalc
             // 
-            btnCalc.Location = new Point(38, 332);
+            btnCalc.Location = new Point(27, 199);
+            btnCalc.Margin = new Padding(2);
             btnCalc.Name = "btnCalc";
-            btnCalc.Size = new Size(112, 70);
-            btnCalc.TabIndex = 4;
-            btnCalc.Text = "Calculate Total";
+            btnCalc.Size = new Size(78, 42);
+            btnCalc.TabIndex = 3;
+            btnCalc.Text = "&Calculate Total";
             btnCalc.UseVisualStyleBackColor = true;
+            btnCalc.Click += btnCalc_Click;
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(209, 332);
+            btnReset.Location = new Point(146, 199);
+            btnReset.Margin = new Padding(2);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(112, 70);
-            btnReset.TabIndex = 5;
-            btnReset.Text = "Reset";
+            btnReset.Size = new Size(78, 42);
+            btnReset.TabIndex = 4;
+            btnReset.Text = "&Reset";
             btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(383, 332);
+            btnQuit.Location = new Point(268, 199);
+            btnQuit.Margin = new Padding(2);
             btnQuit.Name = "btnQuit";
-            btnQuit.Size = new Size(112, 70);
-            btnQuit.TabIndex = 6;
-            btnQuit.Text = "Quit";
+            btnQuit.Size = new Size(78, 42);
+            btnQuit.TabIndex = 5;
+            btnQuit.Text = "&Quit";
             btnQuit.UseVisualStyleBackColor = true;
             btnQuit.Click += btnQuit_Click;
             // 
@@ -103,17 +115,19 @@
             // 
             lstOut.AccessibleName = "";
             lstOut.FormattingEnabled = true;
-            lstOut.ItemHeight = 25;
-            lstOut.Location = new Point(38, 154);
+            lstOut.ItemHeight = 15;
+            lstOut.Location = new Point(27, 92);
+            lstOut.Margin = new Padding(2);
             lstOut.Name = "lstOut";
-            lstOut.Size = new Size(457, 129);
+            lstOut.Size = new Size(321, 79);
             lstOut.TabIndex = 7;
+            lstOut.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(541, 450);
+            ClientSize = new Size(379, 270);
             Controls.Add(lstOut);
             Controls.Add(btnQuit);
             Controls.Add(btnReset);
@@ -122,8 +136,10 @@
             Controls.Add(txtcustomername);
             Controls.Add(label1);
             Controls.Add(txtnumwidgets);
+            Margin = new Padding(2);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
