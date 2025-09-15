@@ -31,7 +31,7 @@ namespace Das_Project_4
         {
             txtcustomername.Clear();
             txtnumwidgets.Clear();
-            lstOut.Items.Clear();
+            PriceOut.Items.Clear();
         }
 
         private void txtnumwidgets_Enter(object sender, EventArgs e)
@@ -45,6 +45,21 @@ namespace Das_Project_4
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcustomername_TextChanged(object sender, EventArgs e)
         {
 
         }

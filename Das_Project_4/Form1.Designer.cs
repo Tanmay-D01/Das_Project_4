@@ -35,15 +35,14 @@
             btnCalc = new Button();
             btnReset = new Button();
             btnQuit = new Button();
-            lstOut = new ListBox();
+            PriceOut = new ListBox();
             SuspendLayout();
             // 
             // txtnumwidgets
             // 
-            txtnumwidgets.Location = new Point(146, 56);
-            txtnumwidgets.Margin = new Padding(2);
+            txtnumwidgets.Location = new Point(158, 83);
             txtnumwidgets.Name = "txtnumwidgets";
-            txtnumwidgets.Size = new Size(137, 23);
+            txtnumwidgets.Size = new Size(77, 31);
             txtnumwidgets.TabIndex = 0;
             txtnumwidgets.TextChanged += txtnumwidgets_TextChanged;
             txtnumwidgets.Enter += txtnumwidgets_Enter;
@@ -52,49 +51,46 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(48, 24);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(39, 40);
             label1.Name = "label1";
-            label1.Size = new Size(94, 15);
+            label1.Size = new Size(95, 25);
             label1.TabIndex = 0;
-            label1.Text = "Customer Name";
+            label1.Text = "Game Title";
             label1.Click += label1_Click;
             // 
             // txtcustomername
             // 
-            txtcustomername.Location = new Point(146, 24);
-            txtcustomername.Margin = new Padding(2);
+            txtcustomername.Location = new Point(158, 37);
             txtcustomername.Name = "txtcustomername";
-            txtcustomername.Size = new Size(137, 23);
+            txtcustomername.Size = new Size(336, 31);
             txtcustomername.TabIndex = 2;
+            txtcustomername.TextChanged += txtcustomername_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(31, 59);
-            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Location = new Point(39, 89);
             label2.Name = "label2";
-            label2.Size = new Size(111, 15);
+            label2.Size = new Size(80, 25);
             label2.TabIndex = 2;
-            label2.Text = "Number of Widgets";
+            label2.Text = "Quantity";
+            label2.Click += label2_Click;
             // 
             // btnCalc
             // 
-            btnCalc.Location = new Point(27, 199);
-            btnCalc.Margin = new Padding(2);
+            btnCalc.Location = new Point(39, 332);
             btnCalc.Name = "btnCalc";
-            btnCalc.Size = new Size(78, 42);
+            btnCalc.Size = new Size(111, 70);
             btnCalc.TabIndex = 3;
-            btnCalc.Text = "&Calculate Total";
+            btnCalc.Text = "&Calculate Total Price";
             btnCalc.UseVisualStyleBackColor = true;
             btnCalc.Click += btnCalc_Click;
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(146, 199);
-            btnReset.Margin = new Padding(2);
+            btnReset.Location = new Point(209, 332);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(78, 42);
+            btnReset.Size = new Size(111, 70);
             btnReset.TabIndex = 4;
             btnReset.Text = "&Reset";
             btnReset.UseVisualStyleBackColor = true;
@@ -102,33 +98,31 @@
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(268, 199);
-            btnQuit.Margin = new Padding(2);
+            btnQuit.Location = new Point(383, 332);
             btnQuit.Name = "btnQuit";
-            btnQuit.Size = new Size(78, 42);
+            btnQuit.Size = new Size(111, 70);
             btnQuit.TabIndex = 5;
             btnQuit.Text = "&Quit";
             btnQuit.UseVisualStyleBackColor = true;
             btnQuit.Click += btnQuit_Click;
             // 
-            // lstOut
+            // PriceOut
             // 
-            lstOut.AccessibleName = "";
-            lstOut.FormattingEnabled = true;
-            lstOut.ItemHeight = 15;
-            lstOut.Location = new Point(27, 92);
-            lstOut.Margin = new Padding(2);
-            lstOut.Name = "lstOut";
-            lstOut.Size = new Size(321, 79);
-            lstOut.TabIndex = 7;
-            lstOut.TabStop = false;
+            PriceOut.AccessibleName = "";
+            PriceOut.FormattingEnabled = true;
+            PriceOut.ItemHeight = 25;
+            PriceOut.Location = new Point(39, 153);
+            PriceOut.Name = "PriceOut";
+            PriceOut.Size = new Size(457, 129);
+            PriceOut.TabIndex = 7;
+            PriceOut.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(379, 270);
-            Controls.Add(lstOut);
+            ClientSize = new Size(541, 450);
+            Controls.Add(PriceOut);
             Controls.Add(btnQuit);
             Controls.Add(btnReset);
             Controls.Add(btnCalc);
@@ -136,9 +130,8 @@
             Controls.Add(txtcustomername);
             Controls.Add(label1);
             Controls.Add(txtnumwidgets);
-            Margin = new Padding(2);
             Name = "Form1";
-            Text = "Tanmay-Das Form 1";
+            Text = "Tanmay-Das Video Game 4";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -153,6 +146,6 @@
         private Button btnCalc;
         private Button btnReset;
         private Button btnQuit;
-        private ListBox lstOut;
+        private ListBox PriceOut;
     }
 }
