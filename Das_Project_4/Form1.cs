@@ -19,7 +19,18 @@ namespace Das_Project_4
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
+            // variables need to declared with data type - string
+            string customerName;
+            int numQuantity;
+            decimal taxRate;
 
+            //Read from the text box into the variable
+            customerName = txtGameTitle.Text;
+
+            numQuantity = int.Parse(numQuantity.Text);
+            taxRate = decimal.Parse(txtTaxRate.Text)
+
+            btnReset.Focus();
         }
 
         private void txtnumwidgets_TextChanged(object sender, EventArgs e)
@@ -29,20 +40,20 @@ namespace Das_Project_4
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            txtcustomername.Clear();
-            txtnumwidgets.Clear();
+            txtGameTitle.Clear();
+            txtQuantity.Clear();
             PriceOut.Items.Clear();
-            txtcustomername.Focus();
+            txtGameTitle.Focus();
         }
 
         private void txtnumwidgets_Enter(object sender, EventArgs e)
         {
-            txtnumwidgets.BackColor = Color.Beige;
+            txtQuantity.BackColor = Color.Beige;
         }
 
         private void txtnumwidgets_Leave(object sender, EventArgs e)
         {
-            txtnumwidgets.BackColor = SystemColors.Window;
+            txtQuantity.BackColor = SystemColors.Window;
         }
 
         private void Form1_Load(object sender, EventArgs e)
