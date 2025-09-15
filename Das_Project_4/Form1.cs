@@ -32,6 +32,7 @@ namespace Das_Project_4
             txtcustomername.Clear();
             txtnumwidgets.Clear();
             PriceOut.Items.Clear();
+            txtcustomername.Focus();
         }
 
         private void txtnumwidgets_Enter(object sender, EventArgs e)
