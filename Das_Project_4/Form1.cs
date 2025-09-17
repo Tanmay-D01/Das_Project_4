@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace Das_Project_4
 {
     public partial class Form1 : Form
@@ -21,28 +23,41 @@ namespace Das_Project_4
         {
             // variables need to declared with data type - string
             string customerName;
-            int numQuantity;
-            decimal taxRate;
+            //int numQuantity;
+            //decimal taxRate;
+            //decimal widgetPrice = 5;
+           // decimal total, subtotal, amTax;
 
             //Read from the text box into the variable
             customerName = txtGameTitle.Text;
 
-            numQuantity = int.Parse(numQuantity.Text);
-            taxRate = decimal.Parse(txtTaxRate.Text)
+            //numQuantity = int.Parse(numQuantity.Text);
+            //taxRate = decimal.Parse(txtTaxRate.Text)
+
+
+            // Output of the Calc
+
+
+            lstOut.Items.Add("The Game Title is: " + txtGameTitle);
+            lstOut.Items.Add("The Number of Copies Bought is: " + txtQuantity);
+            lstOut.Items.Add("Price of Each Game: " + txtGameTitle);
+
+            ToString("")
+            lstOut.Items.Add(ToString(""))
 
             btnReset.Focus();
         }
 
         private void txtnumwidgets_TextChanged(object sender, EventArgs e)
         {
-
+            d
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             txtGameTitle.Clear();
             txtQuantity.Clear();
-            PriceOut.Items.Clear();
+            lstOut.Items.Clear();
             txtGameTitle.Focus();
         }
 

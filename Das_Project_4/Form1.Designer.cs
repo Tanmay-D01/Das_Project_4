@@ -35,7 +35,7 @@
             btnCalc = new Button();
             btnReset = new Button();
             btnQuit = new Button();
-            PriceOut = new ListBox();
+            lstOut = new ListBox();
             SuspendLayout();
             // 
             // txtQuantity
@@ -113,24 +113,24 @@
             btnQuit.UseVisualStyleBackColor = true;
             btnQuit.Click += btnQuit_Click;
             // 
-            // PriceOut
+            // lstOut
             // 
-            PriceOut.AccessibleName = "";
-            PriceOut.FormattingEnabled = true;
-            PriceOut.ItemHeight = 15;
-            PriceOut.Location = new Point(27, 92);
-            PriceOut.Margin = new Padding(2);
-            PriceOut.Name = "PriceOut";
-            PriceOut.Size = new Size(321, 79);
-            PriceOut.TabIndex = 7;
-            PriceOut.TabStop = false;
+            lstOut.AccessibleName = "";
+            lstOut.FormattingEnabled = true;
+            lstOut.ItemHeight = 15;
+            lstOut.Location = new Point(27, 92);
+            lstOut.Margin = new Padding(2);
+            lstOut.Name = "lstOut";
+            lstOut.Size = new Size(321, 79);
+            lstOut.TabIndex = 7;
+            lstOut.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(379, 270);
-            Controls.Add(PriceOut);
+            Controls.Add(lstOut);
             Controls.Add(btnQuit);
             Controls.Add(btnReset);
             Controls.Add(btnCalc);
@@ -155,6 +155,6 @@
         private Button btnCalc;
         private Button btnReset;
         private Button btnQuit;
-        private ListBox PriceOut;
+        private ListBox lstOut;
     }
 }
