@@ -37,20 +37,22 @@ namespace Das_Project_4
 
             // Output of the Calc
 
+            
+            ///TO BE USED in NEXT ICA
+            
+            ///lstOut.Items.Add("The Game Title is: " + txtGameTitle);
+            ///lstOut.Items.Add("The Number of Copies Bought is: " + txtQuantity);
+            ///lstOut.Items.Add("Price of Each Game: " + txtGameTitle);
 
-            lstOut.Items.Add("The Game Title is: " + txtGameTitle);
-            lstOut.Items.Add("The Number of Copies Bought is: " + txtQuantity);
-            lstOut.Items.Add("Price of Each Game: " + txtGameTitle);
-
-            ToString("")
-            lstOut.Items.Add(ToString(""))
+            ///ToString("")
+            ///lstOut.Items.Add(ToString(""))
 
             btnReset.Focus();
         }
 
-        private void txtnumwidgets_TextChanged(object sender, EventArgs e)
+        private void txtGameTitle_TextChanged(object sender, EventArgs e)
         {
-            d
+            
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -61,15 +63,32 @@ namespace Das_Project_4
             txtGameTitle.Focus();
         }
 
-        private void txtnumwidgets_Enter(object sender, EventArgs e)
+
+        ///FOCUS COLOR CHANGES
+
+        ///Changes the color based on focus on Game Title Field
+        private void txtGameTitle_Enter(object sender, EventArgs e)
+        {
+            txtGameTitle.BackColor = Color.Beige;
+        }
+
+        private void txtGameTitle_Leave(object sender, EventArgs e)
+        {
+            txtGameTitle.BackColor = SystemColors.Window;
+        }
+
+        ///Changes the color based on focus on Quantity Field 
+        private void txtQuantity_Enter(object sender, EventArgs e)
         {
             txtQuantity.BackColor = Color.Beige;
         }
 
-        private void txtnumwidgets_Leave(object sender, EventArgs e)
+        private void txtQuantity_Leave(object sender, EventArgs e)
         {
             txtQuantity.BackColor = SystemColors.Window;
         }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -85,10 +104,9 @@ namespace Das_Project_4
         {
 
         }
-
-        private void txtcustomername_TextChanged(object sender, EventArgs e)
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
         {
-
+        
         }
     }
 }

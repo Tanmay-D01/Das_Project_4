@@ -45,9 +45,9 @@
             txtQuantity.Name = "txtQuantity";
             txtQuantity.Size = new Size(55, 23);
             txtQuantity.TabIndex = 2;
-            txtQuantity.TextChanged += txtnumwidgets_TextChanged;
-            txtQuantity.Enter += txtnumwidgets_Enter;
-            txtQuantity.Leave += txtnumwidgets_Leave;
+            txtQuantity.TextChanged += txtQuantity_TextChanged; //Added this to end of code to resolve error
+            txtQuantity.Enter += txtQuantity_Enter;      
+            txtQuantity.Leave += txtQuantity_Leave;      
             // 
             // label1
             // 
@@ -67,7 +67,9 @@
             txtGameTitle.Name = "txtGameTitle";
             txtGameTitle.Size = new Size(236, 23);
             txtGameTitle.TabIndex = 1;
-            txtGameTitle.TextChanged += txtcustomername_TextChanged;
+            txtGameTitle.TextChanged += txtGameTitle_TextChanged;
+            txtGameTitle.Enter += txtGameTitle_Enter;    //Added to code
+            txtGameTitle.Leave += txtGameTitle_Leave;    //Added to code
             // 
             // label2
             // 
