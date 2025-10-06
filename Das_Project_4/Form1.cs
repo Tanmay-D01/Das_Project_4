@@ -22,16 +22,19 @@ namespace Das_Project_4
         private void btnCalc_Click(object sender, EventArgs e)
         {
             // variables need to declared with data type - string
-            string customerName;
-            //int numQuantity;
+            string gameTitle;
+            int quantity;
             //decimal taxRate;
-            //decimal widgetPrice = 5;
-           // decimal total, subtotal, amTax;
+            decimal gamePrice = 20;
+            decimal total;
 
             //Read from the text box into the variable
-            customerName = txtGameTitle.Text;
+            gameTitle = txtGameTitle.Text;
 
-            //numQuantity = int.Parse(numQuantity.Text);
+            quantity = int.Parse(txtQuantity.Text);
+
+            total = gamePrice * quantity;
+            
             //taxRate = decimal.Parse(txtTaxRate.Text)
 
 
