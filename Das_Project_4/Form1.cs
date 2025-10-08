@@ -24,31 +24,33 @@ namespace Das_Project_4
             // variables need to declared with data type - string
             string gameTitle;
             int quantity;
-            //decimal taxRate;
             decimal gamePrice = 20;
             decimal total;
+            //decimal taxRate; //NOT NEEDED 
+
 
             //Read from the text box into the variable
             gameTitle = txtGameTitle.Text;
 
             quantity = int.Parse(txtQuantity.Text);
 
+
+            // CALCULATION: 
             total = gamePrice * quantity;
-            
-            //taxRate = decimal.Parse(txtTaxRate.Text)
 
 
-            // Output of the Calc
+            // CLEAR LIST:
+            lstOut.Items.Clear();
 
-            
-            ///TO BE USED in NEXT ICA
-            
-            ///lstOut.Items.Add("The Game Title is: " + txtGameTitle);
-            ///lstOut.Items.Add("The Number of Copies Bought is: " + txtQuantity);
-            ///lstOut.Items.Add("Price of Each Game: " + txtGameTitle);
 
-            ///ToString("")
-            ///lstOut.Items.Add(ToString(""))
+            // OUTPUT IN LISTBOX:
+            lstOut.Items.Add("PURCHASE SUMMARY: ");
+            lstOut.Items.Add("      ");
+            lstOut.Items.Add("Game Title: " + gameTitle);
+            lstOut.Items.Add("Price of Each Game: " + gamePrice.ToString("C"));
+            lstOut.Items.Add("Number of Copies: " + quantity);
+            lstOut.Items.Add("    ");
+            lstOut.Items.Add("Your Total Cost: $" + total);
 
             btnReset.Focus();
         }

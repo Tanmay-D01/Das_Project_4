@@ -40,54 +40,49 @@
             // 
             // txtQuantity
             // 
-            txtQuantity.Location = new Point(111, 50);
-            txtQuantity.Margin = new Padding(2);
+            txtQuantity.Location = new Point(159, 83);
             txtQuantity.Name = "txtQuantity";
-            txtQuantity.Size = new Size(55, 23);
+            txtQuantity.Size = new Size(77, 31);
             txtQuantity.TabIndex = 2;
-            txtQuantity.TextChanged += txtQuantity_TextChanged; //Added this to end of code to resolve error
-            txtQuantity.Enter += txtQuantity_Enter;      
-            txtQuantity.Leave += txtQuantity_Leave;      
+            txtQuantity.TextChanged += txtQuantity_TextChanged;
+            txtQuantity.Enter += txtQuantity_Enter;
+            txtQuantity.Leave += txtQuantity_Leave;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(27, 24);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(39, 40);
             label1.Name = "label1";
-            label1.Size = new Size(63, 15);
+            label1.Size = new Size(95, 25);
             label1.TabIndex = 0;
             label1.Text = "Game Title";
             label1.Click += label1_Click;
             // 
             // txtGameTitle
             // 
-            txtGameTitle.Location = new Point(111, 22);
-            txtGameTitle.Margin = new Padding(2);
+            txtGameTitle.Location = new Point(159, 37);
             txtGameTitle.Name = "txtGameTitle";
-            txtGameTitle.Size = new Size(236, 23);
+            txtGameTitle.Size = new Size(335, 31);
             txtGameTitle.TabIndex = 1;
             txtGameTitle.TextChanged += txtGameTitle_TextChanged;
-            txtGameTitle.Enter += txtGameTitle_Enter;    //Added to code
-            txtGameTitle.Leave += txtGameTitle_Leave;    //Added to code
+            txtGameTitle.Enter += txtGameTitle_Enter;
+            txtGameTitle.Leave += txtGameTitle_Leave;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(27, 53);
-            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Location = new Point(39, 88);
             label2.Name = "label2";
-            label2.Size = new Size(53, 15);
+            label2.Size = new Size(80, 25);
             label2.TabIndex = 2;
             label2.Text = "Quantity";
             label2.Click += label2_Click;
             // 
             // btnCalc
             // 
-            btnCalc.Location = new Point(27, 199);
-            btnCalc.Margin = new Padding(2);
+            btnCalc.Location = new Point(39, 373);
             btnCalc.Name = "btnCalc";
-            btnCalc.Size = new Size(78, 42);
+            btnCalc.Size = new Size(111, 70);
             btnCalc.TabIndex = 3;
             btnCalc.Text = "&Calculate Total Price";
             btnCalc.UseVisualStyleBackColor = true;
@@ -95,10 +90,9 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(146, 199);
-            btnReset.Margin = new Padding(2);
+            btnReset.Location = new Point(209, 373);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(78, 42);
+            btnReset.Size = new Size(111, 70);
             btnReset.TabIndex = 4;
             btnReset.Text = "&Reset";
             btnReset.UseVisualStyleBackColor = true;
@@ -106,10 +100,9 @@
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(268, 199);
-            btnQuit.Margin = new Padding(2);
+            btnQuit.Location = new Point(383, 373);
             btnQuit.Name = "btnQuit";
-            btnQuit.Size = new Size(78, 42);
+            btnQuit.Size = new Size(111, 70);
             btnQuit.TabIndex = 5;
             btnQuit.Text = "&Quit";
             btnQuit.UseVisualStyleBackColor = true;
@@ -119,19 +112,18 @@
             // 
             lstOut.AccessibleName = "";
             lstOut.FormattingEnabled = true;
-            lstOut.ItemHeight = 15;
-            lstOut.Location = new Point(27, 92);
-            lstOut.Margin = new Padding(2);
+            lstOut.ItemHeight = 25;
+            lstOut.Location = new Point(39, 140);
             lstOut.Name = "lstOut";
-            lstOut.Size = new Size(321, 79);
+            lstOut.Size = new Size(457, 204);
             lstOut.TabIndex = 7;
             lstOut.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(379, 270);
+            ClientSize = new Size(541, 487);
             Controls.Add(lstOut);
             Controls.Add(btnQuit);
             Controls.Add(btnReset);
@@ -140,7 +132,6 @@
             Controls.Add(txtGameTitle);
             Controls.Add(label1);
             Controls.Add(txtQuantity);
-            Margin = new Padding(2);
             Name = "Form1";
             Text = "Tanmay-Das Video Game 4";
             Load += Form1_Load;
