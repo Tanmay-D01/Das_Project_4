@@ -16,48 +16,71 @@ namespace Das_Project_4
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            DialogResult buttonSelected = MessageBox.Show("Are you sure you want to Quit?", "Exit Program", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (buttonSelected == DialogResult.Yes)
+
+            {
+                this.Close();
+            }
         }
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
-            // variables need to declared with data type - string
+            // Decleared Variables 
             string gameTitle;
             int quantity;
-            decimal gamePrice = 20;
+            decimal gamePrice = 20m;
             decimal total;
             //decimal taxRate; //NOT NEEDED 
+            bool validQuantity;
+
+            // Check for Numeric in Quantity with TryParse
+            validQuantity = int.TryParse(txtQuantity.Text, out quantity);
+
+            // if statement
+            if (validQuantity)
+            {
 
 
-            //Read from the text box into the variable
-            gameTitle = txtGameTitle.Text;
+                //Read from the text box into the variable
+                gameTitle = txtGameTitle.Text;
 
-            quantity = int.Parse(txtQuantity.Text);
-
-
-            // CALCULATION: 
-            total = gamePrice * quantity;
+                quantity = int.Parse(txtQuantity.Text);
 
 
-            // CLEAR LIST:
-            lstOut.Items.Clear();
+                // CALCULATION: 
+                total = gamePrice * quantity;
 
 
-            // OUTPUT IN LISTBOX:
-            lstOut.Items.Add("PURCHASE SUMMARY: ");
-            lstOut.Items.Add("      ");
-            lstOut.Items.Add("Game Title: " + gameTitle);
-            lstOut.Items.Add("Price of Each Game: " + gamePrice.ToString("C"));
-            lstOut.Items.Add("Number of Copies: " + quantity);
-            lstOut.Items.Add("    ");
-            lstOut.Items.Add("Your Total Cost: $" + total);
+                // CLEAR LIST:
+                lstOut.Items.Clear();
 
-            btnReset.Focus();
+
+                // OUTPUT IN LISTBOX:
+                lstOut.Items.Add("PURCHASE SUMMARY: ");
+                lstOut.Items.Add("      ");
+                lstOut.Items.Add("Game Title: " + gameTitle);
+                lstOut.Items.Add("Price of Each Game: " + gamePrice.ToString("C"));
+                lstOut.Items.Add("Number of Copies: " + quantity);
+                lstOut.Items.Add("    ");
+                lstOut.Items.Add("Your Total Cost: $" + total);
+
+                btnReset.Focus();
+            }
+            else
+            {
+                lstOut.Items.Add("Please Input the Correct Values!");
+            }
+            if (!validQuantity)
+            {
+                lstOut.Items.Add("Numer of quantity is not a whole number");
+            }
         }
 
         private void txtGameTitle_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -111,7 +134,7 @@ namespace Das_Project_4
         }
         private void txtQuantity_TextChanged(object sender, EventArgs e)
         {
-        
+
         }
     }
 }
