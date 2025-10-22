@@ -9,6 +9,11 @@ namespace Das_Project_4
             InitializeComponent();
         }
 
+        //Class Level Variables
+
+        const string PLATFORMER_GENERE = "Platformer Genere";
+
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -34,6 +39,7 @@ namespace Das_Project_4
             decimal total;
             //decimal taxRate; //NOT NEEDED 
             bool validQuantity;
+            string genre;
 
             // Check for Numeric in Quantity with TryParse
             validQuantity = int.TryParse(txtQuantity.Text, out quantity);
@@ -133,6 +139,25 @@ namespace Das_Project_4
 
         }
         private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoFPS.Checked) 
+            {
+                gamePrice = "20M";
+                    
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
