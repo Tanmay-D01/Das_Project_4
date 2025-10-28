@@ -211,7 +211,7 @@ namespace Das_Project_4
         }
         private void label1_Click(object sender, EventArgs e)
         {
-            // Optional action when clicking label1
+            // Added to remove error within the code
         }
     }
 }
