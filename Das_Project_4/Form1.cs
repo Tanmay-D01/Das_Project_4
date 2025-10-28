@@ -9,16 +9,28 @@ namespace Das_Project_4
             InitializeComponent();
         }
 
-        //Class Level Variables
+        // DECLARED Variables 
+        string gameTitle = ""; //Added the quotes to remove warning for empty null value
+        int quantity;
+        decimal gamePrice = 20m; //default game price
+        decimal total;
+        //decimal taxRate; //NOT NEEDED 
+        bool validQuantity = false;
+        string genre = "";
 
-        const string PLATFORMER_GENERE = "Platformer Genere";
+
+        //Class Level Variables for Switch
+
+        const string GENRE_PLATFORMER = "Platformer";
+        const string GENRE_FPS = "FPS";
+        const string GENRE_PUZZLE = "Puzzle";
+
+        const decimal PRICE_PLATFORMER = 20m;
+        const decimal PRICE_FPS = 35m;
+        const decimal PRICE_PUZZLE = 45m;
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //QUIT BUTTION
         private void btnQuit_Click(object sender, EventArgs e)
         {
 
@@ -30,29 +42,43 @@ namespace Das_Project_4
             }
         }
 
+
         private void btnCalc_Click(object sender, EventArgs e)
         {
-            // Decleared Variables 
-            string gameTitle;
-            int quantity;
-            decimal gamePrice = 20m;
-            decimal total;
-            //decimal taxRate; //NOT NEEDED 
-            bool validQuantity;
-            string genre;
 
             // Check for Numeric in Quantity with TryParse
             validQuantity = int.TryParse(txtQuantity.Text, out quantity);
 
+            //checks for game title
+            gameTitle = txtGameTitle.Text;
+
+            // Switch Statement
+            switch (genre)
+            {
+                case GENRE_PLATFORMER:
+                    gamePrice = PRICE_PLATFORMER;
+                    break;
+
+                case GENRE_FPS:
+                    gamePrice = PRICE_FPS;
+                    break;
+
+                case GENRE_PUZZLE:
+                    gamePrice = PRICE_PUZZLE;
+                    break;
+                default:
+                    lstOut.Items.Add("Error in this switch - This should never happen");
+                    break;
+
+            }
+
+
+
             // if statement
             if (validQuantity)
             {
-
-
                 //Read from the text box into the variable
                 gameTitle = txtGameTitle.Text;
-
-                quantity = int.Parse(txtQuantity.Text);
 
 
                 // CALCULATION: 
@@ -81,6 +107,12 @@ namespace Das_Project_4
             if (!validQuantity)
             {
                 lstOut.Items.Add("Numer of quantity is not a whole number");
+
+                //Adds error if there is no text in Game
+                if (gameTitle == "")
+                {
+                    lstOut.Items.Add("Please enter a Game Title");
+                }
             }
         }
 
@@ -95,6 +127,9 @@ namespace Das_Project_4
             txtQuantity.Clear();
             lstOut.Items.Clear();
             txtGameTitle.Focus();
+
+            //defaults selection to platformer
+            rdoPlatformer.Checked = true;
         }
 
 
@@ -126,7 +161,7 @@ namespace Das_Project_4
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            rdoPlatformer.Checked = true;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -145,21 +180,38 @@ namespace Das_Project_4
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdoFPS.Checked) 
+            if (rdoPlatformer.Checked)
             {
-                gamePrice = "20M";
-                    
+                genre = GENRE_PLATFORMER;
+                gamePrice = PRICE_PLATFORMER;
             }
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
+            if (rdoFPS.Checked)
+            {
+                genre = GENRE_FPS;
+                gamePrice = PRICE_FPS;
+            }
+        }
 
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoPuzzle.Checked)
+            {
+                genre = GENRE_PUZZLE;
+                gamePrice = PRICE_PUZZLE;
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+            // Optional action when clicking label1
         }
     }
 }
