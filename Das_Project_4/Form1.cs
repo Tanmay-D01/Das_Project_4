@@ -25,9 +25,9 @@ namespace Das_Project_4
         const string GENRE_FPS = "FPS";
         const string GENRE_PUZZLE = "Puzzle";
 
-        const decimal PRICE_PLATFORMER = 20m;
-        const decimal PRICE_FPS = 35m;
-        const decimal PRICE_PUZZLE = 45m;
+        decimal PricePlatformer = 20m;
+        decimal PriceFPS = 35m;
+        decimal PricePuzzle = 45m;
 
 
         //QUIT BUTTION
@@ -56,15 +56,15 @@ namespace Das_Project_4
             switch (genre)
             {
                 case GENRE_PLATFORMER:
-                    gamePrice = PRICE_PLATFORMER;
+                    gamePrice = PricePlatformer;
                     break;
 
                 case GENRE_FPS:
-                    gamePrice = PRICE_FPS;
+                    gamePrice = PriceFPS;
                     break;
 
                 case GENRE_PUZZLE:
-                    gamePrice = PRICE_PUZZLE;
+                    gamePrice = PricePuzzle;
                     break;
                 default:
                     lstOut.Items.Add("Error in this switch - This should never happen");
@@ -183,7 +183,7 @@ namespace Das_Project_4
             if (rdoPlatformer.Checked)
             {
                 genre = GENRE_PLATFORMER;
-                gamePrice = PRICE_PLATFORMER;
+                gamePrice = PricePlatformer;
             }
         }
 
@@ -192,7 +192,7 @@ namespace Das_Project_4
             if (rdoFPS.Checked)
             {
                 genre = GENRE_FPS;
-                gamePrice = PRICE_FPS;
+                gamePrice = PriceFPS;
             }
         }
 
@@ -201,7 +201,7 @@ namespace Das_Project_4
             if (rdoPuzzle.Checked)
             {
                 genre = GENRE_PUZZLE;
-                gamePrice = PRICE_PUZZLE;
+                gamePrice = PricePuzzle;
             }
         }
 
