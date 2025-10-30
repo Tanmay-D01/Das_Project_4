@@ -10,27 +10,29 @@ namespace Das_Project_4
         }
 
         // DECLARED Variables 
-        string gameTitle = ""; //Added the quotes to remove warning for empty null value
+        string gameTitle = ""; // Added the quotes to remove warning for empty null value
         int quantity;
-        decimal gamePrice = 20m; //default game price
+        decimal gamePrice = 20m; // Default game price
         decimal total;
         //decimal taxRate; //NOT NEEDED 
         bool validQuantity = false;
-        string genre = "";
+        string genre = ""; // Determines which Game Genere gets selected from Genere Box
+        string GameTypeTransLog = "PurchasedGameTransactionLog.txt"; // String created which writes to the txt file
 
 
-        //Class Level Variables for Switch
+        // Class level variables for Switch
 
         const string GENRE_PLATFORMER = "Platformer";
         const string GENRE_FPS = "FPS";
         const string GENRE_PUZZLE = "Puzzle";
 
+        // Prices for Games Generes
         decimal PricePlatformer = 20m;
         decimal PriceFPS = 35m;
         decimal PricePuzzle = 45m;
 
 
-        //QUIT BUTTION
+        // QUIT BUTTION
         private void btnQuit_Click(object sender, EventArgs e)
         {
 
@@ -42,52 +44,45 @@ namespace Das_Project_4
             }
         }
 
-
+        // CALCULATION BUTTON
         private void btnCalc_Click(object sender, EventArgs e)
         {
 
             // Check for Numeric in Quantity with TryParse
             validQuantity = int.TryParse(txtQuantity.Text, out quantity);
 
-            //checks for game title
+            // Checks for GameTitle in "Game Title" via if statement
             gameTitle = txtGameTitle.Text;
 
+
             // Switch Statement
-            switch (genre)
+            if (validQuantity && gameTitle != "")
             {
-                case GENRE_PLATFORMER:
-                    gamePrice = PricePlatformer;
-                    break;
+                // Switch Statement - sets price based on selected genre
+                switch (genre)
+                {
+                    case GENRE_PLATFORMER:
+                        gamePrice = PricePlatformer;
+                        break;
 
-                case GENRE_FPS:
-                    gamePrice = PriceFPS;
-                    break;
+                    case GENRE_FPS:
+                        gamePrice = PriceFPS;
+                        break;
 
-                case GENRE_PUZZLE:
-                    gamePrice = PricePuzzle;
-                    break;
-                default:
-                    lstOut.Items.Add("Error in this switch - This should never happen");
-                    break;
+                    case GENRE_PUZZLE:
+                        gamePrice = PricePuzzle;
+                        break;
 
-            }
-
-
-
-            // if statement
-            if (validQuantity)
-            {
-                //Read from the text box into the variable
-                gameTitle = txtGameTitle.Text;
-
+                    default:
+                        lstOut.Items.Add("Error in this switch - This should never happen");
+                        break;
+                }
 
                 // CALCULATION: 
                 total = gamePrice * quantity;
 
-
                 // CLEAR LIST:
                 lstOut.Items.Clear();
-
 
                 // OUTPUT IN LISTBOX:
                 lstOut.Items.Add("PURCHASE SUMMARY: ");
@@ -98,20 +93,38 @@ namespace Das_Project_4
                 lstOut.Items.Add("    ");
                 lstOut.Items.Add("Your Total Cost: $" + total);
 
+
+                // Writes Transaction history to file named " PurchasedGameTransactionLog.txt "
+                StreamWriter sw;
+                sw = File.AppendText(GameTypeTransLog);
+                sw.WriteLine(" ---------- Transaction Summary At: " + DateTime.Now + " ---------- ");
+                sw.WriteLine("     ");
+                sw.WriteLine("Game Type: " + genre);
+                sw.WriteLine("Game Title: " + gameTitle);
+                sw.WriteLine("Game Price: " + gamePrice);
+                sw.WriteLine("Number of Copies Ordered: " + quantity);
+                sw.WriteLine("     ");
+                sw.WriteLine("Total Charged: " + total.ToString("C"));
+
+                // Closes txt file
+                sw.Close();
+
                 btnReset.Focus();
             }
             else
             {
-                lstOut.Items.Add("Please Input the Correct Values!");
-            }
-            if (!validQuantity)
-            {
-                lstOut.Items.Add("Numer of quantity is not a whole number");
+                // Listed error messages for invalid inputs 
+                lstOut.Items.Clear();
+                lstOut.Items.Add("Please refer to the following errors: ");
 
-                //Adds error if there is no text in Game
+                if (!validQuantity)
+                {
+                    lstOut.Items.Add("Quantity must be a whole number!");
+                }
+
                 if (gameTitle == "")
                 {
-                    lstOut.Items.Add("Please enter a Game Title");
+                    lstOut.Items.Add("Please enter a Game Title!");
                 }
             }
         }
@@ -121,6 +134,7 @@ namespace Das_Project_4
 
         }
 
+        // RESET BUTTON
         private void btnReset_Click(object sender, EventArgs e)
         {
             txtGameTitle.Clear();
@@ -133,9 +147,9 @@ namespace Das_Project_4
         }
 
 
-        ///FOCUS COLOR CHANGES
+        // FOCUS COLOR CHANGES
 
-        ///Changes the color based on focus on Game Title Field
+        // Changes the color based on focus on Game Title Field
         private void txtGameTitle_Enter(object sender, EventArgs e)
         {
             txtGameTitle.BackColor = Color.Beige;
@@ -146,7 +160,7 @@ namespace Das_Project_4
             txtGameTitle.BackColor = SystemColors.Window;
         }
 
-        ///Changes the color based on focus on Quantity Field 
+        // Changes the color based on focus on Quantity Field 
         private void txtQuantity_Enter(object sender, EventArgs e)
         {
             txtQuantity.BackColor = Color.Beige;
