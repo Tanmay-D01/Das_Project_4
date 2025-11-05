@@ -1,0 +1,8 @@
+ ---------- Transaction Summary At: 11/5/2025 10:52:20 AM ---------- 
+     
+Game Type: FPS
+Game Title: Something Something
+Game Price: 35
+Number of Copies Ordered: 10
+     
+Total Charged: $350.00

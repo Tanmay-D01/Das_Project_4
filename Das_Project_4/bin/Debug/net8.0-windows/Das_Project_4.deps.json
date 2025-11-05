@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Das_Project_4/1.0.0": {
+        "runtime": {
+          "Das_Project_4.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Das_Project_4/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
