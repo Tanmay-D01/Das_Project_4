@@ -102,7 +102,7 @@ namespace Das_Project_4
                 sw.WriteLine("Game Type: " + genre);
                 sw.WriteLine("Game Title: " + gameTitle);
                 sw.WriteLine("Game Price: " + gamePrice);
-                sw.WriteLine("Number of Copies Ordered: " + quantity);
+                sw.WriteLine("Number of Copies Ordered: " + quantity.ToString("NO"));
                 sw.WriteLine("     ");
                 sw.WriteLine("Total Charged: " + total.ToString("C"));
 
