@@ -47,7 +47,7 @@
             // txtQuantity
             // 
             txtQuantity.Location = new Point(109, 167);
-            txtQuantity.Margin = new Padding(2, 2, 2, 2);
+            txtQuantity.Margin = new Padding(2);
             txtQuantity.Name = "txtQuantity";
             txtQuantity.Size = new Size(55, 23);
             txtQuantity.TabIndex = 6;
@@ -69,7 +69,7 @@
             // txtGameTitle
             // 
             txtGameTitle.Location = new Point(109, 139);
-            txtGameTitle.Margin = new Padding(2, 2, 2, 2);
+            txtGameTitle.Margin = new Padding(2);
             txtGameTitle.Name = "txtGameTitle";
             txtGameTitle.Size = new Size(236, 23);
             txtGameTitle.TabIndex = 5;
@@ -91,7 +91,7 @@
             // btnCalc
             // 
             btnCalc.Location = new Point(26, 366);
-            btnCalc.Margin = new Padding(2, 2, 2, 2);
+            btnCalc.Margin = new Padding(2);
             btnCalc.Name = "btnCalc";
             btnCalc.Size = new Size(78, 42);
             btnCalc.TabIndex = 8;
@@ -102,7 +102,7 @@
             // btnReset
             // 
             btnReset.Location = new Point(145, 366);
-            btnReset.Margin = new Padding(2, 2, 2, 2);
+            btnReset.Margin = new Padding(2);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(78, 42);
             btnReset.TabIndex = 9;
@@ -113,7 +113,7 @@
             // btnQuit
             // 
             btnQuit.Location = new Point(267, 366);
-            btnQuit.Margin = new Padding(2, 2, 2, 2);
+            btnQuit.Margin = new Padding(2);
             btnQuit.Name = "btnQuit";
             btnQuit.Size = new Size(78, 42);
             btnQuit.TabIndex = 10;
@@ -127,7 +127,7 @@
             lstOut.FormattingEnabled = true;
             lstOut.ItemHeight = 15;
             lstOut.Location = new Point(26, 226);
-            lstOut.Margin = new Padding(2, 2, 2, 2);
+            lstOut.Margin = new Padding(2);
             lstOut.Name = "lstOut";
             lstOut.Size = new Size(321, 124);
             lstOut.TabIndex = 7;
@@ -185,6 +185,7 @@
             // openFileDialog1
             // 
             openFileDialog1.FileName = "GameTransaction";
+            openFileDialog1.FileOk += openFileDialog1_FileOk;
             // 
             // Form1
             // 
@@ -200,7 +201,7 @@
             Controls.Add(txtGameTitle);
             Controls.Add(label1);
             Controls.Add(txtQuantity);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Form1";
             Text = "Tanmay-Das Video Game 4";
             Load += Form1_Load;

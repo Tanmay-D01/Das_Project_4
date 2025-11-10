@@ -227,5 +227,10 @@ namespace Das_Project_4
         {
             // Added to remove error within the code
         }
+
+        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
     }
 }
