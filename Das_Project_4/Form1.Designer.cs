@@ -41,14 +41,18 @@
             rdoPuzzle = new RadioButton();
             groupBox1 = new GroupBox();
             openFileDialog1 = new OpenFileDialog();
+            menuStrip1 = new MenuStrip();
+            mnuSettings = new ToolStripMenuItem();
             groupBox1.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // txtQuantity
             // 
-            txtQuantity.Location = new Point(156, 278);
+            txtQuantity.Location = new Point(109, 181);
+            txtQuantity.Margin = new Padding(2);
             txtQuantity.Name = "txtQuantity";
-            txtQuantity.Size = new Size(77, 31);
+            txtQuantity.Size = new Size(55, 23);
             txtQuantity.TabIndex = 6;
             txtQuantity.TextChanged += txtQuantity_TextChanged;
             txtQuantity.Enter += txtQuantity_Enter;
@@ -57,18 +61,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(36, 235);
+            label1.Location = new Point(25, 155);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(95, 25);
+            label1.Size = new Size(63, 15);
             label1.TabIndex = 0;
             label1.Text = "Game Title";
             label1.Click += label1_Click;
             // 
             // txtGameTitle
             // 
-            txtGameTitle.Location = new Point(156, 232);
+            txtGameTitle.Location = new Point(109, 153);
+            txtGameTitle.Margin = new Padding(2);
             txtGameTitle.Name = "txtGameTitle";
-            txtGameTitle.Size = new Size(335, 31);
+            txtGameTitle.Size = new Size(236, 23);
             txtGameTitle.TabIndex = 5;
             txtGameTitle.TextChanged += txtGameTitle_TextChanged;
             txtGameTitle.Enter += txtGameTitle_Enter;
@@ -77,18 +83,20 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(36, 283);
+            label2.Location = new Point(25, 184);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(80, 25);
+            label2.Size = new Size(53, 15);
             label2.TabIndex = 2;
             label2.Text = "Quantity";
             label2.Click += label2_Click;
             // 
             // btnCalc
             // 
-            btnCalc.Location = new Point(37, 610);
+            btnCalc.Location = new Point(26, 380);
+            btnCalc.Margin = new Padding(2);
             btnCalc.Name = "btnCalc";
-            btnCalc.Size = new Size(111, 70);
+            btnCalc.Size = new Size(78, 42);
             btnCalc.TabIndex = 8;
             btnCalc.Text = "&Calculate Total Price";
             btnCalc.UseVisualStyleBackColor = true;
@@ -96,9 +104,10 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(207, 610);
+            btnReset.Location = new Point(145, 380);
+            btnReset.Margin = new Padding(2);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(111, 70);
+            btnReset.Size = new Size(78, 42);
             btnReset.TabIndex = 9;
             btnReset.Text = "&Reset";
             btnReset.UseVisualStyleBackColor = true;
@@ -106,9 +115,10 @@
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(381, 610);
+            btnQuit.Location = new Point(267, 380);
+            btnQuit.Margin = new Padding(2);
             btnQuit.Name = "btnQuit";
-            btnQuit.Size = new Size(111, 70);
+            btnQuit.Size = new Size(78, 42);
             btnQuit.TabIndex = 10;
             btnQuit.Text = "&Quit";
             btnQuit.UseVisualStyleBackColor = true;
@@ -118,20 +128,20 @@
             // 
             lstOut.AccessibleName = "";
             lstOut.FormattingEnabled = true;
-            lstOut.ItemHeight = 25;
-            lstOut.Location = new Point(37, 377);
+            lstOut.ItemHeight = 15;
+            lstOut.Location = new Point(26, 240);
+            lstOut.Margin = new Padding(2);
             lstOut.Name = "lstOut";
-            lstOut.Size = new Size(457, 204);
+            lstOut.Size = new Size(321, 124);
             lstOut.TabIndex = 7;
             lstOut.TabStop = false;
             // 
             // rdoPlatformer
             // 
             rdoPlatformer.AutoSize = true;
-            rdoPlatformer.Location = new Point(19, 63);
-            rdoPlatformer.Margin = new Padding(4, 5, 4, 5);
+            rdoPlatformer.Location = new Point(13, 38);
             rdoPlatformer.Name = "rdoPlatformer";
-            rdoPlatformer.Size = new Size(120, 29);
+            rdoPlatformer.Size = new Size(81, 19);
             rdoPlatformer.TabIndex = 2;
             rdoPlatformer.TabStop = true;
             rdoPlatformer.Text = "Platformer\n";
@@ -141,10 +151,9 @@
             // rdoFPS
             // 
             rdoFPS.AutoSize = true;
-            rdoFPS.Location = new Point(197, 63);
-            rdoFPS.Margin = new Padding(4, 5, 4, 5);
+            rdoFPS.Location = new Point(138, 38);
             rdoFPS.Name = "rdoFPS";
-            rdoFPS.Size = new Size(66, 29);
+            rdoFPS.Size = new Size(44, 19);
             rdoFPS.TabIndex = 3;
             rdoFPS.TabStop = true;
             rdoFPS.Text = "FPS";
@@ -154,10 +163,9 @@
             // rdoPuzzle
             // 
             rdoPuzzle.AutoSize = true;
-            rdoPuzzle.Location = new Point(353, 63);
-            rdoPuzzle.Margin = new Padding(4, 5, 4, 5);
+            rdoPuzzle.Location = new Point(247, 38);
             rdoPuzzle.Name = "rdoPuzzle";
-            rdoPuzzle.Size = new Size(86, 29);
+            rdoPuzzle.Size = new Size(58, 19);
             rdoPuzzle.TabIndex = 4;
             rdoPuzzle.TabStop = true;
             rdoPuzzle.Text = "Puzzle";
@@ -169,11 +177,9 @@
             groupBox1.Controls.Add(rdoPuzzle);
             groupBox1.Controls.Add(rdoPlatformer);
             groupBox1.Controls.Add(rdoFPS);
-            groupBox1.Location = new Point(39, 43);
-            groupBox1.Margin = new Padding(4, 5, 4, 5);
+            groupBox1.Location = new Point(27, 40);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4, 5, 4, 5);
-            groupBox1.Size = new Size(454, 142);
+            groupBox1.Size = new Size(318, 85);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Generes";
@@ -184,11 +190,27 @@
             openFileDialog1.FileName = "GameTransaction";
             openFileDialog1.FileOk += openFileDialog1_FileOk;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { mnuSettings });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(379, 24);
+            menuStrip1.TabIndex = 11;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // mnuSettings
+            // 
+            mnuSettings.Name = "mnuSettings";
+            mnuSettings.Size = new Size(61, 20);
+            mnuSettings.Text = "&Settings";
+            mnuSettings.Click += mnuSettings_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(541, 725);
+            ClientSize = new Size(379, 448);
             Controls.Add(groupBox1);
             Controls.Add(lstOut);
             Controls.Add(btnQuit);
@@ -198,11 +220,16 @@
             Controls.Add(txtGameTitle);
             Controls.Add(label1);
             Controls.Add(txtQuantity);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(2);
             Name = "Form1";
             Text = "Tanmay-Das Video Game 4";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -222,5 +249,7 @@
         private RadioButton rdoPuzzle;
         private GroupBox groupBox1;
         private OpenFileDialog openFileDialog1;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem mnuSettings;
     }
 }

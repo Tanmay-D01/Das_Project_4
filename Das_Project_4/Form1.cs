@@ -22,6 +22,7 @@ namespace Das_Project_4
 
 
         // Class level variables for Switch
+        Form2 sf;
         const string GENRE_PLATFORMER = "Platformer";
         const string GENRE_FPS = "FPS";
         const string GENRE_PUZZLE = "Puzzle";
@@ -177,6 +178,9 @@ namespace Das_Project_4
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            sf = new Form2(this);
+            //sf.ShowDialog();
+
             rdoPlatformer.Checked = true;
 
             bool fileValid = false;
@@ -256,6 +260,11 @@ namespace Das_Project_4
         private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
+        }
+
+        private void mnuSettings_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
