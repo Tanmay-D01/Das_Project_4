@@ -1,4 +1,5 @@
 using System.Numerics;
+using System.Security.Cryptography;
 
 namespace Das_Project_4
 {
@@ -10,26 +11,21 @@ namespace Das_Project_4
         }
 
         // DECLARED Variables 
-        string gameTitle = ""; // Added the quotes to remove warning for empty null value
-        int quantity;
-        decimal gamePrice = 20m; // Default game price
-        decimal total;
+
         //decimal taxRate; //NOT NEEDED 
-        bool validQuantity = false;
         string genre = ""; // Determines which Game Genere gets selected from Genere Box
         string GameTypeTransLog = "PurchasedGameTransactionLog.txt"; // String created which writes to the txt file
+        string GenreConfig = "GenreConfig.txt"; // Searches for config file for Genere prices
+        decimal PricePlatformer, PriceFPS, PricePuzzle;
+        decimal gamePrice = 0m; // Default game price without config file
+
 
 
         // Class level variables for Switch
-
         const string GENRE_PLATFORMER = "Platformer";
         const string GENRE_FPS = "FPS";
         const string GENRE_PUZZLE = "Puzzle";
 
-        // Prices for Games Generes
-        decimal PricePlatformer = 20m;
-        decimal PriceFPS = 35m;
-        decimal PricePuzzle = 45m;
 
 
         // QUIT BUTTION
@@ -47,6 +43,12 @@ namespace Das_Project_4
         // CALCULATION BUTTON
         private void btnCalc_Click(object sender, EventArgs e)
         {
+
+            //Other declared variables
+            string gameTitle = ""; // Added the quotes to remove warning for empty null value
+            int quantity;
+            decimal total;
+            bool validQuantity = false;
 
             // Check for Numeric in Quantity with TryParse
             validQuantity = int.TryParse(txtQuantity.Text, out quantity);
@@ -101,8 +103,8 @@ namespace Das_Project_4
                 sw.WriteLine("     ");
                 sw.WriteLine("Game Type: " + genre);
                 sw.WriteLine("Game Title: " + gameTitle);
-                sw.WriteLine("Game Price: " + gamePrice);
-                sw.WriteLine("Number of Copies Ordered: " + quantity.ToString("NO"));
+                sw.WriteLine("Game Price: " + gamePrice.ToString("C"));
+                sw.WriteLine("Number of Copies Ordered: " + quantity.ToString("N0"));
                 sw.WriteLine("     ");
                 sw.WriteLine("Total Charged: " + total.ToString("C"));
 
@@ -176,6 +178,29 @@ namespace Das_Project_4
         private void Form1_Load(object sender, EventArgs e)
         {
             rdoPlatformer.Checked = true;
+
+            bool fileValid = false;
+            StreamReader sr;
+
+            do
+            {
+                try
+                {
+                    sr = File.OpenText(GenreConfig);
+                    fileValid = true;
+                    PricePlatformer = decimal.Parse(sr.ReadLine()!); //Added ! to remove null refrence argument warning 
+                    PriceFPS = decimal.Parse(sr.ReadLine()!);
+                    PricePuzzle = decimal.Parse(sr.ReadLine()!);
+                    sr.Close();
+                }
+                catch (FileNotFoundException)
+                {
+                    MessageBox.Show("The configuration file is required. Please select the correct file.", "File Not Found");
+                    openFileDialog1.Filter = "Text Files|*.txt|All Files|*.*";
+                    openFileDialog1.ShowDialog();
+                    GenreConfig = openFileDialog1.FileName;
+                }
+            } while (!fileValid);
         }
 
         private void label2_Click(object sender, EventArgs e)

@@ -14,3 +14,43 @@ Game Price: 35
 Number of Copies Ordered: NO
      
 Total Charged: $350.00
+ ---------- Transaction Summary At: 11/11/2025 10:17:55 PM ---------- 
+     
+Game Type: Platformer
+Game Title: dasjk
+Game Price: $20.99
+Number of Copies Ordered: 10
+     
+Total Charged: $209.90
+ ---------- Transaction Summary At: 11/11/2025 10:22:28 PM ---------- 
+     
+Game Type: Platformer
+Game Title: SomethingSomething
+Game Price: $20.99
+Number of Copies Ordered: 10
+     
+Total Charged: $209.90
+ ---------- Transaction Summary At: 11/11/2025 10:22:38 PM ---------- 
+     
+Game Type: FPS
+Game Title: SomethingSomething
+Game Price: $35.99
+Number of Copies Ordered: 10
+     
+Total Charged: $359.90
+ ---------- Transaction Summary At: 11/11/2025 10:22:41 PM ---------- 
+     
+Game Type: Puzzle
+Game Title: SomethingSomething
+Game Price: $45.99
+Number of Copies Ordered: 10
+     
+Total Charged: $459.90
+ ---------- Transaction Summary At: 11/11/2025 10:35:14 PM ---------- 
+     
+Game Type: FPS
+Game Title: SomethingSomething33
+Game Price: $35.99
+Number of Copies Ordered: 200
+     
+Total Charged: $7,198.00
