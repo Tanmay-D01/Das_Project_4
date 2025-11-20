@@ -10,6 +10,40 @@ namespace Das_Project_4
             InitializeComponent();
         }
 
+        public decimal PricePlatformer
+        {
+            get { return PricePlatformer; }
+            set
+            {
+                if (value >= 0)
+                {
+                    PricePlatformer = value;
+                }
+            }
+        }
+        public decimal PriceFPS
+        {
+            get { return PriceFPS; }
+            set
+            {
+                if (value >= 0)
+                {
+                    PriceFPS = value;
+                }
+            }
+        }
+        public decimal PricePuzzle
+        {
+            get { return PricePuzzle; }
+            set
+            {
+                if (value >= 0)
+                {
+                    PricePuzzle = value;
+                }
+            }
+        }
+
         // DECLARED Variables 
 
         //decimal taxRate; //NOT NEEDED 
