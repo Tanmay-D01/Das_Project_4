@@ -40,9 +40,14 @@ namespace Das_Project_4
 
             if (platformerOK)
             {
-                transactionForm.platormer 
+                transactionForm.platormer
             }
             this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

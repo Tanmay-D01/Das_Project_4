@@ -43,13 +43,14 @@
             openFileDialog1 = new OpenFileDialog();
             menuStrip1 = new MenuStrip();
             mnuSettings = new ToolStripMenuItem();
+            displayLogFileToolStripMenuItem = new ToolStripMenuItem();
             groupBox1.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // txtQuantity
             // 
-            txtQuantity.Location = new Point(109, 181);
+            txtQuantity.Location = new Point(113, 181);
             txtQuantity.Margin = new Padding(2);
             txtQuantity.Name = "txtQuantity";
             txtQuantity.Size = new Size(55, 23);
@@ -61,7 +62,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 155);
+            label1.Location = new Point(29, 156);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(63, 15);
@@ -71,10 +72,10 @@
             // 
             // txtGameTitle
             // 
-            txtGameTitle.Location = new Point(109, 153);
+            txtGameTitle.Location = new Point(113, 153);
             txtGameTitle.Margin = new Padding(2);
             txtGameTitle.Name = "txtGameTitle";
-            txtGameTitle.Size = new Size(236, 23);
+            txtGameTitle.Size = new Size(234, 23);
             txtGameTitle.TabIndex = 5;
             txtGameTitle.TextChanged += txtGameTitle_TextChanged;
             txtGameTitle.Enter += txtGameTitle_Enter;
@@ -83,7 +84,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25, 184);
+            label2.Location = new Point(29, 184);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(53, 15);
@@ -93,7 +94,7 @@
             // 
             // btnCalc
             // 
-            btnCalc.Location = new Point(26, 380);
+            btnCalc.Location = new Point(29, 380);
             btnCalc.Margin = new Padding(2);
             btnCalc.Name = "btnCalc";
             btnCalc.Size = new Size(78, 42);
@@ -104,7 +105,7 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(145, 380);
+            btnReset.Location = new Point(146, 380);
             btnReset.Margin = new Padding(2);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(78, 42);
@@ -115,7 +116,7 @@
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(267, 380);
+            btnQuit.Location = new Point(269, 380);
             btnQuit.Margin = new Padding(2);
             btnQuit.Name = "btnQuit";
             btnQuit.Size = new Size(78, 42);
@@ -129,10 +130,10 @@
             lstOut.AccessibleName = "";
             lstOut.FormattingEnabled = true;
             lstOut.ItemHeight = 15;
-            lstOut.Location = new Point(26, 240);
+            lstOut.Location = new Point(29, 240);
             lstOut.Margin = new Padding(2);
             lstOut.Name = "lstOut";
-            lstOut.Size = new Size(321, 124);
+            lstOut.Size = new Size(318, 124);
             lstOut.TabIndex = 7;
             lstOut.TabStop = false;
             // 
@@ -177,7 +178,7 @@
             groupBox1.Controls.Add(rdoPuzzle);
             groupBox1.Controls.Add(rdoPlatformer);
             groupBox1.Controls.Add(rdoFPS);
-            groupBox1.Location = new Point(27, 40);
+            groupBox1.Location = new Point(29, 40);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(318, 85);
             groupBox1.TabIndex = 1;
@@ -192,7 +193,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { mnuSettings });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { mnuSettings, displayLogFileToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(379, 24);
@@ -205,6 +206,14 @@
             mnuSettings.Size = new Size(61, 20);
             mnuSettings.Text = "&Settings";
             mnuSettings.Click += mnuSettings_Click;
+            // 
+            // displayLogFileToolStripMenuItem
+            // 
+            displayLogFileToolStripMenuItem.Name = "displayLogFileToolStripMenuItem";
+            displayLogFileToolStripMenuItem.Size = new Size(101, 20);
+            displayLogFileToolStripMenuItem.Text = "Display Log File";
+            displayLogFileToolStripMenuItem.ToolTipText = "This will display...";
+            displayLogFileToolStripMenuItem.Click += displayLogFileToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -251,5 +260,6 @@
         private OpenFileDialog openFileDialog1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem mnuSettings;
+        private ToolStripMenuItem displayLogFileToolStripMenuItem;
     }
 }

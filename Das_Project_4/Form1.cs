@@ -298,7 +298,12 @@ namespace Das_Project_4
 
         private void mnuSettings_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void displayLogFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

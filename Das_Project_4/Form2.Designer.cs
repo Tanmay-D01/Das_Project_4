@@ -30,33 +30,99 @@
         {
             label1 = new Label();
             btnSaveReturn = new Button();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            txtPlatPrice = new TextBox();
+            txtFPSPrice = new TextBox();
+            txtPuzzlePrice = new TextBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(64, 9);
+            label1.Font = new Font("HP Simplified Hans", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(22, 28);
             label1.Name = "label1";
-            label1.Size = new Size(145, 15);
+            label1.Size = new Size(257, 23);
             label1.TabIndex = 0;
             label1.Text = "Video Game Price Settings";
+            label1.TextAlign = ContentAlignment.TopCenter;
             label1.Click += label1_Click;
             // 
             // btnSaveReturn
             // 
-            btnSaveReturn.Location = new Point(101, 390);
+            btnSaveReturn.Location = new Point(79, 282);
             btnSaveReturn.Name = "btnSaveReturn";
-            btnSaveReturn.Size = new Size(86, 48);
+            btnSaveReturn.Size = new Size(132, 48);
             btnSaveReturn.TabIndex = 1;
             btnSaveReturn.Text = "&Save && Return";
             btnSaveReturn.UseVisualStyleBackColor = true;
             btnSaveReturn.Click += btnSaveReturn_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label2.Location = new Point(37, 91);
+            label2.Name = "label2";
+            label2.Size = new Size(88, 21);
+            label2.TabIndex = 2;
+            label2.Text = "Platformer";
+            label2.Click += label2_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label3.Location = new Point(89, 148);
+            label3.Name = "label3";
+            label3.Size = new Size(36, 21);
+            label3.TabIndex = 3;
+            label3.Text = "FPS";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label4.Location = new Point(70, 202);
+            label4.Name = "label4";
+            label4.Size = new Size(55, 21);
+            label4.TabIndex = 4;
+            label4.Text = "Puzzle";
+            // 
+            // txtPlatPrice
+            // 
+            txtPlatPrice.Location = new Point(131, 93);
+            txtPlatPrice.Name = "txtPlatPrice";
+            txtPlatPrice.Size = new Size(112, 23);
+            txtPlatPrice.TabIndex = 5;
+            // 
+            // txtFPSPrice
+            // 
+            txtFPSPrice.Location = new Point(131, 146);
+            txtFPSPrice.Name = "txtFPSPrice";
+            txtFPSPrice.Size = new Size(112, 23);
+            txtFPSPrice.TabIndex = 6;
+            // 
+            // txtPuzzlePrice
+            // 
+            txtPuzzlePrice.Location = new Point(131, 204);
+            txtPuzzlePrice.Name = "txtPuzzlePrice";
+            txtPuzzlePrice.Size = new Size(112, 23);
+            txtPuzzlePrice.TabIndex = 7;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(302, 450);
+            ClientSize = new Size(302, 351);
+            Controls.Add(txtPuzzlePrice);
+            Controls.Add(txtFPSPrice);
+            Controls.Add(txtPlatPrice);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(btnSaveReturn);
             Controls.Add(label1);
             Name = "Form2";
@@ -70,5 +136,11 @@
 
         private Label label1;
         private Button btnSaveReturn;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private TextBox txtPlatPrice;
+        private TextBox txtFPSPrice;
+        private TextBox txtPuzzlePrice;
     }
 }
