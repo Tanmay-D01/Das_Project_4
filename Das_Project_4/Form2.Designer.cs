@@ -33,18 +33,18 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            txtPlatPrice = new TextBox();
-            txtFPSPrice = new TextBox();
-            txtPuzzlePrice = new TextBox();
+            txtPricePlatformer = new TextBox();
+            txtPriceFPS = new TextBox();
+            txtPricePuzzle = new TextBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("HP Simplified Hans", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(22, 28);
+            label1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(21, 27);
             label1.Name = "label1";
-            label1.Size = new Size(257, 23);
+            label1.Size = new Size(260, 24);
             label1.TabIndex = 0;
             label1.Text = "Video Game Price Settings";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -91,35 +91,35 @@
             label4.TabIndex = 4;
             label4.Text = "Puzzle";
             // 
-            // txtPlatPrice
+            // txtPricePlatformer
             // 
-            txtPlatPrice.Location = new Point(131, 93);
-            txtPlatPrice.Name = "txtPlatPrice";
-            txtPlatPrice.Size = new Size(112, 23);
-            txtPlatPrice.TabIndex = 5;
+            txtPricePlatformer.Location = new Point(131, 93);
+            txtPricePlatformer.Name = "txtPricePlatformer";
+            txtPricePlatformer.Size = new Size(112, 23);
+            txtPricePlatformer.TabIndex = 5;
             // 
-            // txtFPSPrice
+            // txtPriceFPS
             // 
-            txtFPSPrice.Location = new Point(131, 146);
-            txtFPSPrice.Name = "txtFPSPrice";
-            txtFPSPrice.Size = new Size(112, 23);
-            txtFPSPrice.TabIndex = 6;
+            txtPriceFPS.Location = new Point(131, 146);
+            txtPriceFPS.Name = "txtPriceFPS";
+            txtPriceFPS.Size = new Size(112, 23);
+            txtPriceFPS.TabIndex = 6;
             // 
-            // txtPuzzlePrice
+            // txtPricePuzzle
             // 
-            txtPuzzlePrice.Location = new Point(131, 204);
-            txtPuzzlePrice.Name = "txtPuzzlePrice";
-            txtPuzzlePrice.Size = new Size(112, 23);
-            txtPuzzlePrice.TabIndex = 7;
+            txtPricePuzzle.Location = new Point(131, 204);
+            txtPricePuzzle.Name = "txtPricePuzzle";
+            txtPricePuzzle.Size = new Size(112, 23);
+            txtPricePuzzle.TabIndex = 7;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(302, 351);
-            Controls.Add(txtPuzzlePrice);
-            Controls.Add(txtFPSPrice);
-            Controls.Add(txtPlatPrice);
+            Controls.Add(txtPricePuzzle);
+            Controls.Add(txtPriceFPS);
+            Controls.Add(txtPricePlatformer);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -139,8 +139,8 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox txtPlatPrice;
-        private TextBox txtFPSPrice;
-        private TextBox txtPuzzlePrice;
+        private TextBox txtPricePlatformer;
+        private TextBox txtPriceFPS;
+        private TextBox txtPricePuzzle;
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,12 +13,13 @@ namespace Das_Project_4
 {
     public partial class Form2 : Form
     {
-        Form1 transactionForm;
+        Form1 transactionForm; 
         public Form2(Form1 ff) //given parameter for Form 1 
         {
             InitializeComponent();
-            //ff is a local ver but the code needs a Class lvl var
-            // so the Transaction Form var was created to 
+            // ff is a local var but the code needs a Class lvl var
+            // so the Transaction Form var was created on the class lvl
+            // and set to ff
             transactionForm = ff;
         }
 
@@ -35,14 +37,52 @@ namespace Das_Project_4
         {
             // the temp var is needed since the tryparse does not allow properties in our parameter
             decimal tempPrice;
-            bool platformerOK, fpsOK, PuzzleOK;
-            platformerOK = decimal.TryParse(txtPlatformer.Text, out tempPrice);
+            bool platformerOK, fpsOK, puzzleOK;
+
+
+            // PLATFORMER
+            platformerOK = decimal.TryParse(txtPricePlatformer.Text, out tempPrice);
 
             if (platformerOK)
             {
-                transactionForm.platormer
+                transactionForm.PricePlatformer = tempPrice;
             }
-            this.Hide();
+
+            // FPS
+            fpsOK = decimal.TryParse(txtPriceFPS.Text, out tempPrice);
+            if (fpsOK)
+            {
+                transactionForm.PriceFPS = tempPrice;
+            }
+
+            // PUZZLE
+            puzzleOK = decimal.TryParse(txtPricePuzzle.Text, out tempPrice);
+            if (puzzleOK)
+            {
+                transactionForm.PricePuzzle = tempPrice;
+            }
+            
+
+            if (platformerOK && fpsOK && puzzleOK)
+            {
+                lblErrorMsg.Text = "";
+                // part of optional code - need btncalc button to be internal
+                StreamWriter sw;
+                sw = File.CreateText(transactionForm.GenereConfig);
+                sw.WriteLine(transactionForm.platformerOK.ToString());
+                sw.WriteLine(transactionForm.fpsOK.ToString());
+                sw.WriteLine(transactionForm.puzzleOK.ToString());
+                sw.Close();
+
+
+                transactionForm.btnCalculation.Enabled = true;
+                this.Hide();
+            }
+            else
+            {
+                transactionForm.setSettings();
+                lblErrorMsg.Text = "At least one of the settings entered was invalid and not changed";
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)

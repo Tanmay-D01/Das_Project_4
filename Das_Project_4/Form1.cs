@@ -12,34 +12,34 @@ namespace Das_Project_4
 
         public decimal PricePlatformer
         {
-            get { return PricePlatformer; }
+            get { return pricePlatformer; }
             set
             {
                 if (value >= 0)
                 {
-                    PricePlatformer = value;
+                    pricePlatformer = value;
                 }
             }
         }
         public decimal PriceFPS
         {
-            get { return PriceFPS; }
+            get { return priceFPS; }
             set
             {
                 if (value >= 0)
                 {
-                    PriceFPS = value;
+                    priceFPS = value;
                 }
             }
         }
         public decimal PricePuzzle
         {
-            get { return PricePuzzle; }
+            get { return pricePuzzle; }
             set
             {
                 if (value >= 0)
                 {
-                    PricePuzzle = value;
+                    pricePuzzle = value;
                 }
             }
         }
@@ -50,7 +50,11 @@ namespace Das_Project_4
         string genre = ""; // Determines which Game Genere gets selected from Genere Box
         string GameTypeTransLog = "PurchasedGameTransactionLog.txt"; // String created which writes to the txt file
         string GenreConfig = "GenreConfig.txt"; // Searches for config file for Genere prices
-        decimal PricePlatformer, PriceFPS, PricePuzzle;
+
+        decimal pricePlatformer;
+        decimal priceFPS; 
+        decimal pricePuzzle;
+        
         decimal gamePrice = 0m; // Default game price without config file
 
 
