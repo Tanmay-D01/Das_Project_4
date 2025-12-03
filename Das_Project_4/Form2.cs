@@ -68,14 +68,13 @@ namespace Das_Project_4
                 lblErrorMsg.Text = "";
                 // part of optional code - need btncalc button to be internal
                 StreamWriter sw;
-                sw = File.CreateText(transactionForm.GenereConfig);
-                sw.WriteLine(transactionForm.platformerOK.ToString());
-                sw.WriteLine(transactionForm.fpsOK.ToString());
-                sw.WriteLine(transactionForm.puzzleOK.ToString());
+                sw = File.CreateText(transactionForm.GenreConfig);
+                sw.WriteLine(transactionForm.PricePlatformer.ToString());
+                sw.WriteLine(transactionForm.PriceFPS.ToString());
+                sw.WriteLine(transactionForm.PricePuzzle.ToString());
                 sw.Close();
 
 
-                transactionForm.btnCalculation.Enabled = true;
                 this.Hide();
             }
             else

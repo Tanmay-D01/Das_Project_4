@@ -44,12 +44,16 @@ namespace Das_Project_4
             }
         }
 
+     
+
+
+
         // DECLARED Variables 
 
         //decimal taxRate; //NOT NEEDED 
         string genre = ""; // Determines which Game Genere gets selected from Genere Box
         string GameTypeTransLog = "PurchasedGameTransactionLog.txt"; // String created which writes to the txt file
-        string GenreConfig = "GenreConfig.txt"; // Searches for config file for Genere prices
+        internal string GenreConfig = "GenreConfig.txt"; // Searches for config file for Genere prices
 
         decimal pricePlatformer;
         decimal priceFPS; 
