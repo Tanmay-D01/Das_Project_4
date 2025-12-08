@@ -105,7 +105,7 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(146, 380);
+            btnReset.Location = new Point(149, 380);
             btnReset.Margin = new Padding(2);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(78, 42);

@@ -80,7 +80,7 @@ namespace Das_Project_4
             else
             {
                 transactionForm.setSettings();
-                lblErrorMsg.Text = "At least one of the settings entered was invalid and not changed";
+                lblErrorMsg.Text = "One or more settings entered is invalid, please input the correct values";
             }
         }
 

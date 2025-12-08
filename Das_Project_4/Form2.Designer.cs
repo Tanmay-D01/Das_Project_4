@@ -36,6 +36,7 @@
             txtPricePlatformer = new TextBox();
             txtPriceFPS = new TextBox();
             txtPricePuzzle = new TextBox();
+            lblErrorMsg = new Label();
             SuspendLayout();
             // 
             // label1
@@ -52,7 +53,7 @@
             // 
             // btnSaveReturn
             // 
-            btnSaveReturn.Location = new Point(79, 282);
+            btnSaveReturn.Location = new Point(80, 321);
             btnSaveReturn.Name = "btnSaveReturn";
             btnSaveReturn.Size = new Size(132, 48);
             btnSaveReturn.TabIndex = 1;
@@ -63,10 +64,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            label2.Font = new Font("Microsoft New Tai Lue", 12F, FontStyle.Bold);
             label2.Location = new Point(37, 91);
             label2.Name = "label2";
-            label2.Size = new Size(88, 21);
+            label2.Size = new Size(92, 21);
             label2.TabIndex = 2;
             label2.Text = "Platformer";
             label2.Click += label2_Click;
@@ -74,20 +75,20 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label3.Location = new Point(89, 148);
+            label3.Font = new Font("Microsoft New Tai Lue", 12F, FontStyle.Bold);
+            label3.Location = new Point(89, 146);
             label3.Name = "label3";
-            label3.Size = new Size(36, 21);
+            label3.Size = new Size(37, 21);
             label3.TabIndex = 3;
             label3.Text = "FPS";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label4.Location = new Point(70, 202);
+            label4.Font = new Font("Microsoft New Tai Lue", 12F, FontStyle.Bold);
+            label4.Location = new Point(70, 201);
             label4.Name = "label4";
-            label4.Size = new Size(55, 21);
+            label4.Size = new Size(60, 21);
             label4.TabIndex = 4;
             label4.Text = "Puzzle";
             // 
@@ -100,7 +101,7 @@
             // 
             // txtPriceFPS
             // 
-            txtPriceFPS.Location = new Point(131, 146);
+            txtPriceFPS.Location = new Point(131, 148);
             txtPriceFPS.Name = "txtPriceFPS";
             txtPriceFPS.Size = new Size(112, 23);
             txtPriceFPS.TabIndex = 6;
@@ -112,11 +113,21 @@
             txtPricePuzzle.Size = new Size(112, 23);
             txtPricePuzzle.TabIndex = 7;
             // 
+            // lblErrorMsg
+            // 
+            lblErrorMsg.Font = new Font("Microsoft JhengHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblErrorMsg.ForeColor = Color.Red;
+            lblErrorMsg.Location = new Point(12, 246);
+            lblErrorMsg.Name = "lblErrorMsg";
+            lblErrorMsg.Size = new Size(278, 59);
+            lblErrorMsg.TabIndex = 8;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(302, 351);
+            ClientSize = new Size(302, 395);
+            Controls.Add(lblErrorMsg);
             Controls.Add(txtPricePuzzle);
             Controls.Add(txtPriceFPS);
             Controls.Add(txtPricePlatformer);
@@ -139,8 +150,9 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox txtPricePlatformer;
-        private TextBox txtPriceFPS;
-        private TextBox txtPricePuzzle;
+        private Label lblErrorMsg;
+        internal TextBox txtPricePlatformer;
+        internal TextBox txtPriceFPS;
+        internal TextBox txtPricePuzzle;
     }
 }

@@ -307,6 +307,16 @@ namespace Das_Project_4
         private void mnuSettings_Click(object sender, EventArgs e)
         {
 
+            setSettings();
+            sf.ShowDialog();
+          
+        }
+
+        internal void setSettings()
+        {
+            sf.txtPricePlatformer.Text = PricePlatformer.ToString();
+            sf.txtPriceFPS.Text = PriceFPS.ToString();
+            sf.txtPricePuzzle.Text = PricePuzzle.ToString();
         }
 
         private void displayLogFileToolStripMenuItem_Click(object sender, EventArgs e)
