@@ -121,6 +121,7 @@
             lblErrorMsg.Name = "lblErrorMsg";
             lblErrorMsg.Size = new Size(278, 59);
             lblErrorMsg.TabIndex = 8;
+            lblErrorMsg.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form2
             // 
