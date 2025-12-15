@@ -121,7 +121,7 @@
             // 
             lblErrorMsg.Font = new Font("Microsoft JhengHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblErrorMsg.ForeColor = Color.Red;
-            lblErrorMsg.Location = new Point(7, 423);
+            lblErrorMsg.Location = new Point(12, 423);
             lblErrorMsg.Name = "lblErrorMsg";
             lblErrorMsg.Size = new Size(318, 79);
             lblErrorMsg.TabIndex = 8;

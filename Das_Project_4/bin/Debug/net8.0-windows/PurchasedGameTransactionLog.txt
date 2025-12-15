@@ -94,3 +94,10 @@ Game Price: $20.99
 Number of Copies Ordered: 8
      
 Total Charged: $167.92
+ ---------- Transaction Summary At: 12/15/2025 11:55:22 AM ---------- 
+Game Title: Final Tst
+Price of Each Game: $20.99
+    
+Game Type: Platformer
+Number of Copies Ordered: 100
+Your Total: $$2,099.00

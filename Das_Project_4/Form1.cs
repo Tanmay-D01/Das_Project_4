@@ -1,3 +1,4 @@
+using System.Drawing.Text;
 using System.Numerics;
 using System.Security.Cryptography;
 
@@ -44,7 +45,7 @@ namespace Das_Project_4
             }
         }
 
-     
+
 
 
 
@@ -56,9 +57,9 @@ namespace Das_Project_4
         internal string GenreConfig = "GenreConfig.txt"; // Searches for config file for Genere prices
 
         decimal pricePlatformer;
-        decimal priceFPS; 
+        decimal priceFPS;
         decimal pricePuzzle;
-        
+
         decimal gamePrice = 0m; // Default game price without config file
 
 
@@ -68,6 +69,10 @@ namespace Das_Project_4
         const string GENRE_PLATFORMER = "Platformer";
         const string GENRE_FPS = "FPS";
         const string GENRE_PUZZLE = "Puzzle";
+
+        const int LOGFILE = 2;
+        const int BOTH = 3;
+        const int LISTBOX = 1;
 
 
 
@@ -130,29 +135,17 @@ namespace Das_Project_4
                 lstOut.Items.Clear();
 
                 // OUTPUT IN LISTBOX:
-                lstOut.Items.Add("PURCHASE SUMMARY: ");
-                lstOut.Items.Add("      ");
-                lstOut.Items.Add("Game Title: " + gameTitle);
-                lstOut.Items.Add("Price of Each Game: " + gamePrice.ToString("C"));
-                lstOut.Items.Add("Number of Copies: " + quantity);
-                lstOut.Items.Add("    ");
-                lstOut.Items.Add("Your Total Cost: $" + total);
+                outputMsg(" ---------- Transaction Summary At: " + DateTime.Now + " ---------- ", LOGFILE);
+                outputMsg("PURCHASE SUMMARY: ", BOTH);
+                outputMsg("      ", LISTBOX);
+                outputMsg("Game Title: " + gameTitle, BOTH);
+                outputMsg("Price of Each Game: " + gamePrice.ToString("C"), BOTH);
+                outputMsg("Game Type: " + genre, BOTH);
+                outputMsg("Number of Copies Ordered: " + quantity.ToString("N0"), BOTH);
+                outputMsg("     ", LISTBOX);
+                outputMsg("Your Total: $" + total.ToString("C"), BOTH);
 
 
-                // Writes Transaction history to file named " PurchasedGameTransactionLog.txt "
-                StreamWriter sw;
-                sw = File.AppendText(GameTypeTransLog);
-                sw.WriteLine(" ---------- Transaction Summary At: " + DateTime.Now + " ---------- ");
-                sw.WriteLine("     ");
-                sw.WriteLine("Game Type: " + genre);
-                sw.WriteLine("Game Title: " + gameTitle);
-                sw.WriteLine("Game Price: " + gamePrice.ToString("C"));
-                sw.WriteLine("Number of Copies Ordered: " + quantity.ToString("N0"));
-                sw.WriteLine("     ");
-                sw.WriteLine("Total Charged: " + total.ToString("C"));
-
-                // Closes txt file
-                sw.Close();
 
                 btnReset.Focus();
             }
@@ -309,7 +302,7 @@ namespace Das_Project_4
 
             setSettings();
             sf.ShowDialog();
-          
+
         }
 
         internal void setSettings()
@@ -337,12 +330,12 @@ namespace Das_Project_4
             }
             sr.Close();
 
-            
+
             lstOut.Items.Clear();
             lstOut.Items.Add("Transactions for Genre: " + genre);
             lstOut.Items.Add("  ");
             lstOut.Items.Add("----------------------------------");
-            
+
             int begTrans = 1;
             int endTrans = 5;
 
@@ -353,13 +346,32 @@ namespace Das_Project_4
                 {
                     for (int j = i - begTrans; j <= i + endTrans && j < numEntries; j++)
                     {
-                        
+
                         lstOut.Items.Add(logEntries[j]);
-                        
+
                     }
                     lstOut.Items.Add(" ");
                     i += endTrans;
                 }
+            }
+
+        }
+
+        private void outputMsg(string msg, int outputType)
+        {
+            StreamWriter sw;
+            if (outputType == LISTBOX || outputType == BOTH)
+            {
+                lstOut.Items.Add(msg);
+            }
+
+            if (outputType == LOGFILE || outputType == BOTH)
+
+            {
+                sw = File.AppendText(GameTypeTransLog);
+                sw.WriteLine(msg);
+
+                sw.Close();
             }
 
         }
