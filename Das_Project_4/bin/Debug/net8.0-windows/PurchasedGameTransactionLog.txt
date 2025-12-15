@@ -54,3 +54,43 @@ Game Price: $35.99
 Number of Copies Ordered: 200
      
 Total Charged: $7,198.00
+ ---------- Transaction Summary At: 12/15/2025 2:08:18 AM ---------- 
+     
+Game Type: Platformer
+Game Title: Something
+Game Price: $20.99
+Number of Copies Ordered: 10
+     
+Total Charged: $209.90
+ ---------- Transaction Summary At: 12/15/2025 2:18:29 AM ---------- 
+     
+Game Type: Puzzle
+Game Title: Testing 
+Game Price: $45.99
+Number of Copies Ordered: 10
+     
+Total Charged: $459.90
+ ---------- Transaction Summary At: 12/15/2025 2:18:59 AM ---------- 
+     
+Game Type: Puzzle
+Game Title: TestingTesting
+Game Price: $45.99
+Number of Copies Ordered: 100
+     
+Total Charged: $4,599.00
+ ---------- Transaction Summary At: 12/15/2025 2:21:31 AM ---------- 
+     
+Game Type: FPS
+Game Title: Something111
+Game Price: $35.99
+Number of Copies Ordered: 100
+     
+Total Charged: $3,599.00
+ ---------- Transaction Summary At: 12/15/2025 2:28:51 AM ---------- 
+     
+Game Type: Platformer
+Game Title: ggg
+Game Price: $20.99
+Number of Copies Ordered: 8
+     
+Total Charged: $167.92

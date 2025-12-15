@@ -42,10 +42,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(21, 27);
+            label1.Font = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(16, 29);
             label1.Name = "label1";
-            label1.Size = new Size(260, 24);
+            label1.Size = new Size(300, 26);
             label1.TabIndex = 0;
             label1.Text = "Video Game Price Settings";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -53,9 +53,10 @@
             // 
             // btnSaveReturn
             // 
-            btnSaveReturn.Location = new Point(80, 321);
+            btnSaveReturn.Location = new Point(91, 342);
+            btnSaveReturn.Margin = new Padding(3, 4, 3, 4);
             btnSaveReturn.Name = "btnSaveReturn";
-            btnSaveReturn.Size = new Size(132, 48);
+            btnSaveReturn.Size = new Size(151, 64);
             btnSaveReturn.TabIndex = 1;
             btnSaveReturn.Text = "&Save && Return";
             btnSaveReturn.UseVisualStyleBackColor = true;
@@ -65,9 +66,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft New Tai Lue", 12F, FontStyle.Bold);
-            label2.Location = new Point(37, 91);
+            label2.Location = new Point(42, 121);
             label2.Name = "label2";
-            label2.Size = new Size(92, 21);
+            label2.Size = new Size(114, 27);
             label2.TabIndex = 2;
             label2.Text = "Platformer";
             label2.Click += label2_Click;
@@ -76,9 +77,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft New Tai Lue", 12F, FontStyle.Bold);
-            label3.Location = new Point(89, 146);
+            label3.Location = new Point(102, 195);
             label3.Name = "label3";
-            label3.Size = new Size(37, 21);
+            label3.Size = new Size(45, 27);
             label3.TabIndex = 3;
             label3.Text = "FPS";
             // 
@@ -86,48 +87,51 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft New Tai Lue", 12F, FontStyle.Bold);
-            label4.Location = new Point(70, 201);
+            label4.Location = new Point(80, 268);
             label4.Name = "label4";
-            label4.Size = new Size(60, 21);
+            label4.Size = new Size(73, 27);
             label4.TabIndex = 4;
             label4.Text = "Puzzle";
             // 
             // txtPricePlatformer
             // 
-            txtPricePlatformer.Location = new Point(131, 93);
+            txtPricePlatformer.Location = new Point(150, 124);
+            txtPricePlatformer.Margin = new Padding(3, 4, 3, 4);
             txtPricePlatformer.Name = "txtPricePlatformer";
-            txtPricePlatformer.Size = new Size(112, 23);
+            txtPricePlatformer.Size = new Size(127, 27);
             txtPricePlatformer.TabIndex = 5;
             // 
             // txtPriceFPS
             // 
-            txtPriceFPS.Location = new Point(131, 148);
+            txtPriceFPS.Location = new Point(150, 197);
+            txtPriceFPS.Margin = new Padding(3, 4, 3, 4);
             txtPriceFPS.Name = "txtPriceFPS";
-            txtPriceFPS.Size = new Size(112, 23);
+            txtPriceFPS.Size = new Size(127, 27);
             txtPriceFPS.TabIndex = 6;
             // 
             // txtPricePuzzle
             // 
-            txtPricePuzzle.Location = new Point(131, 204);
+            txtPricePuzzle.Location = new Point(150, 272);
+            txtPricePuzzle.Margin = new Padding(3, 4, 3, 4);
             txtPricePuzzle.Name = "txtPricePuzzle";
-            txtPricePuzzle.Size = new Size(112, 23);
+            txtPricePuzzle.Size = new Size(127, 27);
             txtPricePuzzle.TabIndex = 7;
             // 
             // lblErrorMsg
             // 
             lblErrorMsg.Font = new Font("Microsoft JhengHei", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblErrorMsg.ForeColor = Color.Red;
-            lblErrorMsg.Location = new Point(12, 246);
+            lblErrorMsg.Location = new Point(7, 423);
             lblErrorMsg.Name = "lblErrorMsg";
-            lblErrorMsg.Size = new Size(278, 59);
+            lblErrorMsg.Size = new Size(318, 79);
             lblErrorMsg.TabIndex = 8;
             lblErrorMsg.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(302, 395);
+            ClientSize = new Size(345, 527);
             Controls.Add(lblErrorMsg);
             Controls.Add(txtPricePuzzle);
             Controls.Add(txtPriceFPS);
@@ -137,6 +141,7 @@
             Controls.Add(label2);
             Controls.Add(btnSaveReturn);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form2";
             Text = "Tanmay-Das Video Game 4 Settings Form";
             Load += Form2_Load;

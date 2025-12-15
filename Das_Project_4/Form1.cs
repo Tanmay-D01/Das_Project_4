@@ -321,6 +321,46 @@ namespace Das_Project_4
 
         private void displayLogFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Set array size to = 1000
+            const int MAX_SIZE = 1000;
+            string[] logEntries;
+
+            logEntries = new string[MAX_SIZE];
+
+            StreamReader sr = File.OpenText(GameTypeTransLog);
+            int numEntries = 0;
+
+            while (!sr.EndOfStream)
+            {
+                logEntries[numEntries] = sr.ReadLine()!; //Added ! to remove warning
+                numEntries++;
+            }
+            sr.Close();
+
+            
+            lstOut.Items.Clear();
+            lstOut.Items.Add("Transactions for Genre: " + genre);
+            lstOut.Items.Add("  ");
+            lstOut.Items.Add("----------------------------------");
+            
+            int begTrans = 1;
+            int endTrans = 5;
+
+            // FOR LOOP – scan array
+            for (int i = 0; i < numEntries; i++)
+            {
+                if (logEntries[i] == "Game Type: " + genre)
+                {
+                    for (int j = i - begTrans; j <= i + endTrans && j < numEntries; j++)
+                    {
+                        
+                        lstOut.Items.Add(logEntries[j]);
+                        
+                    }
+                    lstOut.Items.Add(" ");
+                    i += endTrans;
+                }
+            }
 
         }
     }
