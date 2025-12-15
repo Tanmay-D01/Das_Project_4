@@ -101,3 +101,10 @@ Price of Each Game: $20.99
 Game Type: Platformer
 Number of Copies Ordered: 100
 Your Total: $$2,099.00
+ ---------- Transaction Summary At: 12/15/2025 12:01:36 PM ---------- 
+PURCHASE SUMMARY: 
+Game Title: Destiy 4
+Price of Each Game: $35.99
+Game Type: FPS
+Number of Copies Ordered: 23
+Your Total: $$827.77

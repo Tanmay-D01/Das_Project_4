@@ -143,7 +143,7 @@ namespace Das_Project_4
                 outputMsg("Game Type: " + genre, BOTH);
                 outputMsg("Number of Copies Ordered: " + quantity.ToString("N0"), BOTH);
                 outputMsg("     ", LISTBOX);
-                outputMsg("Your Total: $" + total.ToString("C"), BOTH);
+                outputMsg("Your Total:" + total.ToString("C"), BOTH);
 
 
 
